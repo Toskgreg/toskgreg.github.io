@@ -1,0 +1,166 @@
+
+<html>
+    <head>
+    <title>Profile | The  Nrm</title>
+        <link rel="icon" href="images/logo_icon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/w3.css" rel="stylesheet">
+        <link href="fonts/Montserrat-Regular.otf" rel="stylesheet">
+        <link href="css/fontawesome-all.min.css" rel="stylesheet">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Montserrat", sans-serif
+            }
+            
+            .w3-row-padding img {
+                margin-bottom: 12px
+            }
+            
+            .w3-sidebar {
+                width: 120px;
+                background: #222;
+            }
+            
+            #main {
+                margin-left: 120px
+            }
+        </style> <title>Registration | The  Nrm</title>
+        <link rel="stylesheet" type="text/css" href='css/bootstrap.min.css'/> 
+    </head>
+    <style>
+        body{
+            background: black;
+            color:white;
+        }
+        .button {
+            background-color: gray;
+            border: none;
+            color: black;
+            padding: 3px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+        .signup{
+            padding: 15px 50px;
+        }
+    </style>
+    <body class="w3-yellow">
+    <nav class="w3-sidebar w3-bar-block w3-small w3-center">
+            <img style="width:100%" src="images/nrm.png">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hover-black" href="home.html">
+                <i class="fa fa-home w3-xxlarge"></i>
+                <p>HOME</p>
+            </a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-yellow" href="#">
+                <i class="fa fa-user w3-xxlarge"></i>
+                <p>PROFILE</p>
+            </a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hover-black" href="program.html">
+                <i class="fa fa-th-list w3-xxlarge"></i>
+                <p>PROGRAMS</p>
+            </a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hover-black" href="contact.html">
+                <i class="fa fa-envelope w3-xxlarge"></i>
+                <p>CONTACT</p>
+            </a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="document.getElementById('logout').style.display='block';">
+                <i class="fa fa-sign-out-alt w3-xxlarge"></i>
+                <p>LOG OUT</p>
+            </a>
+        </nav>
+        <div class="container-fluid" style="text-align:center">
+            <div class="row">
+                <div>
+                    <br>
+                    <img src="images/nrm.png" style='width:19%'>
+                </div>
+            </div>
+            <h3>Candidate E-Nomination Form</h3>
+            <div class="row" style='margin-left:85px'>
+                <div class='col-md-3 col-md-offset-4'>
+                    <form method='POST' action="e-campaign.html">
+                        <label><strong>Region</strong><input type="text" class='form-control' name = "username" required='required'></label>
+                        <div style="margin-top:1px"></div>
+                        <label><strong>Sub-Region</strong><input type="text" class='form-control' name = "fname" required='required'></label>
+                        <div style="margin-top:1px"></div>
+                        <label><strong>District_Name</strong><input type="text" class='form-control' name= 'lname' required='required'></label>
+                        <div style="margin-top:1px"></div>
+                        <label><strong>Constituency</strong><input type="password" class='form-control' name='password' required='required'></label>
+                        <div style="margin-top:1px"></div>
+                       
+                        <label><strong>National ID Number (NiN)</strong><input type="text" class='form-control' name = "fname" required='required'></label>
+                        <div style="margin-top:1px"></div>
+                        <label><strong>Phone Number</strong><input type="text" class='form-control' name= 'lname' required='required'></label>
+                        <div style="margin-top:1px"></div>
+                        <label><strong>UNEB Index Number</strong><input type="password" class='form-control' name='password' required='required'></label>
+                        <div style="margin-top:1px"></div>
+                        <label><strong>File Upload (Asset Declaration,UNEB results,Letter)</strong><input type="password" class='form-control' name = 'confirm' required='required'></label>
+                        <div style="margin-top:1px"></div>
+                        <button class='button' style="border-radius:5em" name='submit'><strong>Submit</strong></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+ 
+ var list1 = document.getElementById('firstList');
+  
+ list1.options[0] = new Option('--Select--', '');
+ list1.options[1] = new Option('Snacks', 'Snacks');
+ list1.options[2] = new Option('Drinks', 'Drinks');
+ });
+    function getposition(){
+ 
+ var list1 = document.getElementById('firstList');
+ var list2 = document.getElementById("secondList");
+ var list1SelectedValue = list1.options[list1.selectedIndex].value;
+  
+ if (list1SelectedValue=='Snacks')
+ {
+      
+     list2.options.length=0;
+     list2.options[0] = new Option('--Select--', '');
+     list2.options[1] = new Option('Burger', 'Burger');
+     list2.options[2] = new Option('Pizza', 'Pizza');
+     list2.options[3] = new Option('Hotdog', 'Hotdog');
+     list2.options[4] = new Option('Potato Chips', 'Potato Chips');
+     list2.options[5] = new Option('French Fries', 'French Fries');
+      
+ }
+ else if (list1SelectedValue=='Drinks')
+ {
+      
+     list2.options.length=0;
+     list2.options[0] = new Option('--Select--', '');
+     list2.options[1] = new Option('Coca Cola', 'Coca Cola');
+     list2.options[2] = new Option('7up', '7up');
+     list2.options[3] = new Option('Pepsi', 'Pepsi');
+     list2.options[4] = new Option('Coffee', 'Coffee');
+     list2.options[5] = new Option('Tea', 'Tea');
+      
+ }
+}
+</script>
+    
+    <script src="js/jquery-3.3.1.min.js">
+    </script>
+</html>
